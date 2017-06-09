@@ -12,7 +12,7 @@
     # Tools
 #------------------------------------
 
-vagrantConfig.yaml
+configLocal.json
 localStorage/*
 !localStorage/dbBackups
 localStorage/dbBackups/*

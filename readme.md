@@ -12,10 +12,11 @@ To use NFS on Windows (you want to use NFS, it will speed up page loads by about
 
 To get started:
 
-1. Add the `localStorage`, `nginxConfigs`, and `scripts` directories with contained files and directories, and the `Vagrantfile` to your project
-2. Edit the example sync directories in the vagrant file to sync directories as needed for your setup
-3. Edit site.conf to suite the needs of your project (and even add other site configs or change the name)
-4. Duplicate `vagrantConfig.yaml.sample` and use an IP address that does not conflict with any other IP addresses for other vagrant boxes on your setup.
+1. Add the `localStorage` and `vagrantConfig` directories with contained files and directories, and the `Vagrantfile` to your project
+2. Add `.gitignore` to your project, or merge it with your existing `.gitignore`
+3. Edit config.json for your project needs
+3. Edit `vagrantConfig/siteConfigs/site.conf` to suite the needs of your project (and even add other site configs or change the name)
+4. Duplicate `vagrantConfig/configLocal.json.sample` and name it `configLocal.json` and use an IP address that does not conflict with any other IP addresses for other vagrant boxes on your setup.
     - You should continue using the `192.168.56.xxx` address space since that is VirtualBox’s internal address space.
 5. Then you can run `vagrant up`
 
