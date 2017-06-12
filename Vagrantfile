@@ -41,7 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Check if aliases file exists
     if File.exist? aliasesPath then
-    	config.vm.provision 'file', source: aliasesPath, destination: '~/.bash_aliases'
+        config.vm.provision 'file', source: aliasesPath, destination: '~/.bash_aliases'
     end
 
     # Create a private network
