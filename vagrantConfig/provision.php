@@ -33,5 +33,10 @@ if (array_key_exists('databases', $jsonConfig)) {
 
         // Grant database user permissions
         exec('mysql -uroot -psecret -e "GRANT ALL on ' . $databaseConfig['name'] . '.* to \'' . $databaseConfig['user'] . '\'@\'localhost\'"');
+
+        // Import the most recent database dump
+        if (file_exists("/vagrant/localStorage/dbBackups/{$databaseConfig['name']}_latest.sql")) {
+            exec("mysql -uroot -psecret {$databaseConfig['name']} < /vagrant/localStorage/dbBackups/{$databaseConfig['name']}_latest.sql");
+        }
     }
 }
