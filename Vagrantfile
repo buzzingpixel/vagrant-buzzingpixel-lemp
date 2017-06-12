@@ -143,8 +143,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         config.vm.provision "shell" do |s|
             s.inline = <<-SHELL
                 sed -i -e "s,. ~/.custom_message,,g" /home/vagrant/.bashrc
-                echo ". ~/.custom_message" >> /home/vagrant/.bashrc
-                echo ". ~/.custom_message" >> /home/vagrant/.bash_profile
+                # echo ". ~/.custom_message" >> /home/vagrant/.bashrc
+                # echo ". ~/.custom_message" >> /home/vagrant/.bash_profile
                 cp /vagrant/#{customMessagePath} /home/vagrant/.custom_message
             SHELL
         end

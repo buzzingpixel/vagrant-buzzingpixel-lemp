@@ -1,2 +1,2 @@
 echo '';
-echo 'Use `dbBackup` to initiate back up of site database to `localStorage/dbBackups`';
+echo 'Use `dbBackup` to initiate back up of databases to `localStorage/dbBackups`';
